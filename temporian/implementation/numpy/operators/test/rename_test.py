@@ -232,7 +232,7 @@ class RenameOperatorTest(absltest.TestCase):
             rename(input=self.input_node, features={"sales": 1})
 
     def test_rename_feature_with_non_existent_feature(self) -> None:
-        """Test renaming feature with non existent feature."""
+        """Test renaming feature with nonexistent feature."""
         with self.assertRaises(KeyError):
             rename(input=self.input_node, features={"sales_1": "costs"})
 
@@ -265,7 +265,7 @@ class RenameOperatorTest(absltest.TestCase):
             rename(self.input_node, indexes="")
 
     def test_rename_index_with_non_existent_index(self) -> None:
-        """Test renaming index with non existent index."""
+        """Test renaming index with nonexistent index."""
         with self.assertRaises(KeyError):
             rename(input=self.input_node, indexes={"sales_1": "costs"})
 
