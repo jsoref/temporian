@@ -53,7 +53,7 @@ class JoinOperatorTest(absltest.TestCase):
         input_1 = input_node([("a", DType.FLOAT64)])
         input_2 = input_node([("b", DType.FLOAT64)])
         with self.assertRaisesRegex(ValueError, "Non supported join type"):
-            _ = join(input_1, input_2, how="non existing join")
+            _ = join(input_1, input_2, how="nonexistent join")
 
     def test_missing_on(self):
         input_1 = input_node([("a", DType.FLOAT64)])
